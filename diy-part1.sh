@@ -20,7 +20,7 @@
 # 第三方插件
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-echo 'src-git smallpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
+# echo 'src-git smallpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 git clone https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
