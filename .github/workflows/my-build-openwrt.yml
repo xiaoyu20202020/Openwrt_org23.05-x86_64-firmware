@@ -120,7 +120,7 @@ jobs:
       if: (!cancelled())
       run: df -hT
 
-    - name: Upload bin directory #生成的固件导出到自带的github action
+    - name: Upload bin directory 
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
@@ -142,7 +142,7 @@ jobs:
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWARE }}
+        path: ${{ env.FIRMWARE }}/openwrt/bin
 
     - name: Upload firmware to cowtransfer
       id: cowtransfer
