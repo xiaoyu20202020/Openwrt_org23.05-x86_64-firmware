@@ -20,6 +20,9 @@
 # 第三方插件
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+echo 'src-git smallpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
+git clone https://github.com/jerrykuku/luci-theme-argon.git
+git clone https://github.com/lisaac/luci-app-diskman.git
 
 #修改root密码为空
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
