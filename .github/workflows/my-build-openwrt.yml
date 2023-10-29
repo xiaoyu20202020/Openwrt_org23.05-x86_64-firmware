@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: main
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
@@ -55,16 +55,14 @@ jobs:
         sudo apt-get -y install libncursesw5-dev libssl-dev python-is-python3 python2.7-dev python3 unzip wget #ubuntu-latest版本用这个，禁用上面的并python-is-python3替换python
         sudo apt-get -y install python3-distutils python3-setuptools python3-dev rsync subversion
         sudo apt-get -y install swig time xsltproc zlib1g-dev
-        sudo apt-get install libc6-dev # Ubuntu系统的elfutils
-        #apt-cache search libncursesw
-        #sudo -E apt-get -y install libncursesw5-dev
+        #sudo apt-get install libc6-dev # Ubuntu系统的elfutils
         sudo apt-get -qq autoremove --purge
         sudo apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        git clone https://sourceware.org/git/elfutils.git # 下载最新版本elfutils
-        git pull # 更新已有版本
+         #git clone https://sourceware.org/git/elfutils.git # 下载最新版本elfutils
+         #git pull # 更新已有版本
         
     - name: Clone source code
       working-directory: /workdir
