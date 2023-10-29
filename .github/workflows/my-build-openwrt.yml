@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt
+  REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -52,7 +52,7 @@ jobs:
         sudo -E apt-get -y install build-essential ccache ecj fastjar file g++ gawk \
         gettext git java-propose-classpath libelf-dev \
         #libncursesw5-dev libssl-dev python python2.7-dev python3 unzip wget \ #ubuntu-20.04版本用这个，禁用下面的
-        libssl-dev python-is-python3 python2.7-dev python3 unzip wget \ #ubuntu-latest版本需用python-is-python3替换python
+        libncursesw5-dev libssl-dev python-is-python3 python2.7-dev python3 unzip wget \ #ubuntu-latest版本需用python-is-python3替换python
         python3-distutils python3-setuptools python3-dev rsync subversion \
         swig time xsltproc zlib1g-dev
         apt-cache search libncursesw
