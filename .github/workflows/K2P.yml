@@ -196,6 +196,8 @@ jobs:
       with:
         retain_days: 1
         keep_minimum_runs: 3
+        runs:
+        using: node16 # 这里需要改为node16
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
