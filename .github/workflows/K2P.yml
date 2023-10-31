@@ -192,12 +192,12 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: 16
 
     - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+      uses: GitRML/delete-workflow-runs@2.0.4
       with:
         retain_days: 1
         keep_minimum_runs: 3
