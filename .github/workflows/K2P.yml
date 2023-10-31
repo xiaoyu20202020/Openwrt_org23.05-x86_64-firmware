@@ -201,7 +201,6 @@ jobs:
       with:
         retain_days: 1
         keep_minimum_runs: 3
-        runs:
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.3.2
